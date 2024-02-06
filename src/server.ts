@@ -6,7 +6,7 @@ import mainRoutes from './routes/index';
 const server = express();
 
 server.set('view engine', 'mustache');
-server.set('views', path.join(__dirname, 'views'));
+server.set('views', path.join(__dirname, '../src/views'));
 server.engine('mustache', mustacheExpress());
 
 //registrando uma página estática

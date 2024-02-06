@@ -3,7 +3,7 @@ import express = require('express');
 const router = express.Router();
 
 router.get('/', (req: express.Request, res: express.Response) => {
-  res.send('Olá');
+  res.render('home.mustache');
 });
 
 router.get('/contato', (req: express.Request, res: express.Response) => {
