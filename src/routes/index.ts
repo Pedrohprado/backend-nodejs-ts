@@ -1,17 +1,10 @@
 import express = require('express');
+import { home, contacts, about } from '../controllers/homeController';
 
 const router = express.Router();
 
-router.get('/', (req: express.Request, res: express.Response) => {
-  res.render('home.mustache');
-});
-
-router.get('/contato', (req: express.Request, res: express.Response) => {
-  res.send('contatos');
-});
-
-router.get('/sobre', (req: express.Request, res: express.Response) => {
-  res.send('sobre');
-});
+router.get('/', home);
+router.get('/contato', contacts);
+router.get('/sobre', about);
 
 export default router;
